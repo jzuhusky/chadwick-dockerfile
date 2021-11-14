@@ -11,7 +11,7 @@ Also - Now chadwick on Linux! And able to run in Docker! Which opens a world of 
 
 # So here it is! 
 
-This image will compile and make available the latest distro, i.e. 0.9.0 (see https://github.com/chadwickbureau/chadwick/releases). Another contributor should feel free to extend this dockerfile (perhaps using `ARG`(?) to pull any distro a user would want. 
+This image will compile and make available the latest distro, i.e. 0.9.1 (see https://github.com/chadwickbureau/chadwick/releases). Another contributor should feel free to extend this dockerfile (perhaps using `ARG`(?) to pull any distro a user would want. 
 
 1st, clone this repo, then do this (make sure you have docker installed):
 ```bash
@@ -22,19 +22,20 @@ Then, run the docker image to use the tool!
 docker run -it gcc/chadwick-compiled:latest bash
 
 ---- INSIDE THE CONTAINER NOW ----
-root@1dbcc9c3ac95:~/chadwick-0.9.0# pwd
-/root/chadwick-0.9.0
-root@1dbcc9c3ac95:~/chadwick-0.9.0# which cwevent
+root@cafaac274dab:~/chadwick-0.9.1# pwd
+/root/chadwick-0.9.1
+root@cafaac274dab:~/chadwick-0.9.1# which cwevent
 /usr/local/bin/cwevent
-root@1dbcc9c3ac95:~/chadwick-0.9.0# cwevent
-Chadwick expanded event descriptor, version 0.9.0
+root@cafaac274dab:~/chadwick-0.9.1# cwevent
+
+Chadwick expanded event descriptor, version 0.9.1
   Type 'cwevent -h' for help.
 Copyright (c) 2002-2021
 Dr T L Turocy, Chadwick Baseball Bureau (ted.turocy@gmail.com)
 This is free software, subject to the terms of the GNU GPL license.
 
 Can't find teamfile (team)
-root@1dbcc9c3ac95:~/chadwick-0.9.0#
+root@cafaac274dab:~/chadwick-0.9.1#
 ```
 
 # Notes
