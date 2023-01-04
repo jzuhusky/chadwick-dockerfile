@@ -20,22 +20,29 @@ Then, run the docker image to use the tool!
 docker run -it gcc/chadwick-compiled:latest bash
 
 ---- INSIDE THE CONTAINER NOW ----
-root@cafaac274dab:~/chadwick-0.9.1# pwd
-/root/chadwick-0.9.1
-root@cafaac274dab:~/chadwick-0.9.1# which cwevent
-/usr/local/bin/cwevent
-root@cafaac274dab:~/chadwick-0.9.1# cwevent
+root@3c3d00826dc6:~/chadwick-0.10.0# cwevent
 
-Chadwick expanded event descriptor, version 0.9.1
+Chadwick expanded event descriptor, version 0.10.0
   Type 'cwevent -h' for help.
-Copyright (c) 2002-2021
+Copyright (c) 2002-2023
 Dr T L Turocy, Chadwick Baseball Bureau (ted.turocy@gmail.com)
 This is free software, subject to the terms of the GNU GPL license.
 
 Can't find teamfile (team)
-root@cafaac274dab:~/chadwick-0.9.1#
 ```
 
+Alternatively, you can run cwevent directly without interactively bash-ing into the container:
+```
+docker run chadwick:latest cwevent
+
+Chadwick expanded event descriptor, version 0.10.0
+  Type 'cwevent -h' for help.
+Copyright (c) 2002-2023
+Dr T L Turocy, Chadwick Baseball Bureau (ted.turocy@gmail.com)
+This is free software, subject to the terms of the GNU GPL license.
+
+Can't find teamfile (team)
+```
 # Notes
 * This has setup the software inside a linux container, so it's on the user to get the raw retrosheet files into the container. I would suggest cloning the retrosheet repo from chadwick, and mounting inside the container as a volume (hint, use the `-v` flag when doing a `docker run`). If you redirect the output of a chadwick command, e.g. `cwevent, cwbox` to a file, that file should persist in the directory on your host machine that you mounted into the container. 
 
