@@ -48,7 +48,7 @@ Can't find teamfile (team)
 
 # TODO
 * Ideally, I'd like to write a script that does the magic noted above for the user, so one could use this tool as a mac/unix command line tool, and not have to run the docker command. 
-* 
+
 # Contributing
 I make no guarantees about what this is trying to do. If you see something that could be bettter... -> Fork -> PR 
 
