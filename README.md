@@ -3,15 +3,13 @@ Dockerized Chadwick https://github.com/chadwickbureau/chadwick
 
 # Why?
 
-First off, full disclosure, I put this together in 10 minutes, so apologies if my thoughts seem scattered. 
+Personally, I've been using the [chadwick](https://github.com/chadwickbureau/chadwick) tool a lot recently for working with the retrosheet dataset. There exists a MacOS homebrew distribution of the tool, but I've always needed it to run on linux (really in a docker container). And AFAIK, that distro is like 0.7.... so this at least provides an avenue for compiling any distro. 
 
-I've been using the [chadwick](https://github.com/chadwickbureau/chadwick) tool a lot recently for working with the retrosheet dataset. There exists a MacOS homebrew distribution of the tool, but I've always needed it to run on linux (really in a docker container). And AFAIK, that distro is like 0.7.... so this at least provides an avenue for compiling future distros. 
-
-Also - Now chadwick on Linux! And able to run in Docker! Which opens a world of possibilities for me at least. 
+Now chadwick on Linux! And able to run in Docker! Which opens a world of possibilities (for me at least). 
 
 # So here it is! 
 
-This image will compile and make available the latest distro, i.e. 0.9.1 (see https://github.com/chadwickbureau/chadwick/releases). Another contributor should feel free to extend this dockerfile (perhaps using `ARG`(?) to pull any distro a user would want. 
+This image will compile and make available the latest distro, i.e. 0.10.0 (see https://github.com/chadwickbureau/chadwick/releases). Another contributor should feel free to extend this dockerfile (perhaps using `ARG`(?) to pull any distro a user would want. 
 
 1st, clone this repo, then do this (make sure you have docker installed):
 ```bash
